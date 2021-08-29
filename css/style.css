@@ -1,0 +1,256 @@
+:root {
+    --themecolor: #36A1D4;
+    --secondarycolor: #272727;
+  }
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+body {
+    color: var(--secondarycolor);
+}
+#preloader {
+  background: white url(../img/loader.gif) no-repeat center center;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+
+table {
+    table-layout:fixed;
+    width:100%;
+}
+
+.hide {
+    display: none;
+}
+
+.shadow {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+}
+.themebutton {
+    background-color: var(--themecolor);
+    border: none;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 20px;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.icons {
+    font-size: 1.25em;
+    color: var(--themecolor);
+}
+
+.bigicons {
+  font-size: 3.5em;
+  color: var(--themecolor);
+}
+
+.subtitle{
+  font-size: 2rem!important;
+}
+
+@media screen and (max-width: 800px) {
+  .bigicons {
+    font-size: 3em;
+    color: var(--themecolor);
+  }
+  .subtitle{
+    font-size: 1.6rem!important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .bigicons {
+    font-size: 2.5em;
+    color: var(--themecolor);
+  }
+  .subtitle{
+    font-size: 1.4rem!important;
+  }
+}
+
+a {
+    color: var(--secondarycolor);
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+
+#homepagebanner1 {
+    background-image: url(../img/bannerbg3.jpg);
+    /*background-color: rgba(46, 156, 202, 0.40);
+    background-blend-mode: multiply;*/
+}
+
+#homepagebanner2 {
+  background-image: url(../img/bannerbg6.jpg);
+  /*background-color: rgba(46, 156, 202, 0.40);
+  background-blend-mode: multiply;*/
+}
+
+#homepagebanner3 {
+  background-image: url(../img/bannerbg7.jpg);
+  /*background-color: rgba(46, 156, 202, 0.40);
+  background-blend-mode: multiply;*/
+}
+
+#themebanner1 {
+    background-image: url(../img/bannerbg5.jpg);
+    background-color: rgba(0, 0, 0, 0.20);
+    background-blend-mode: multiply;
+}
+
+#themebanner2 {
+  background-image: url(../img/bannerbg2.jpg);
+  background-color: rgba(46, 156, 202, 0.20);
+  background-blend-mode: multiply;
+}
+
+#themebanner3 {
+  background-image: url(../img/bannerbg4.jpg);
+}
+
+.homepagebanner {
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.themebanner {
+    height: auto;
+    padding: 3rem 0rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.separator {
+    color: var(--themecolor);
+    margin: 0 auto 10px;
+    max-width: 240px;
+    text-align: center;
+    position: relative;
+  }
+
+  .separator:before, .separator:after {
+    display: block;
+    width: 40%;
+    content: " ";
+    margin-top: 10px;
+    border: 1px solid var(--themecolor);;
+  }
+
+  .separator:before {
+    float: left;
+  }
+  .separator:after {
+    float: right;
+  }  
+
+  .text-justify {
+    text-align: justify!important;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column {
+  flex: 30%;
+  max-width: 33.3%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.graypic {
+  -webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+  cursor: pointer;
+}
+.graypic:hover {
+  -webkit-filter: grayscale(0);
+	filter: grayscale(0);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+.card{
+overflow: hidden;
+}
+
+.card img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.card:hover img {
+	-webkit-transform: scale(1.2);
+	transform: scale(1.2);
+}
+
+#navbarNav li{
+  position: relative;
+}
+
+#navbarNav a:before, #navbarNav a:after
+{
+    position: absolute;
+    opacity: 0;
+    width: 0%;
+    height: 1.5px;
+    content: '';
+    background: var(--themecolor);
+    transition: all 0.3s;
+}
+
+#navbarNav a:before
+{
+    left: 0px;
+    top: 0px;
+}
+
+#navbarNav a:after
+{
+    right: 0px;
+    bottom: 0px;
+}
+
+#navbarNav a:hover:before, #navbarNav a:hover:after
+{
+    opacity: 1;
+    width: 100%;
+}
